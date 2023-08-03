@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -A1p | awk '{printf "%s%s", $0, (NR == 1 ? "" : ", ")} END {print ""}'
+ls -p1 | sort -df | tr '\n' ',' | sed 's/,$/\n/'
